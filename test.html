@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav
+      class="bg-gray-700 py-6 px-4 rounded-full mt-3 mx-4 md:mx-24 sticky top-0 z-50"
+    >
+      <div class="relative flex items-center justify-center">
+        <!-- Brand (kiri) -->
+        <div class="absolute left-0 pl-4 flex items-center gap-2">
+          <img
+            src="img/cerydralogo.jpg"
+            alt="Logo"
+            class="h-9 w-9 md:h-12 md:w-12 object-contain rounded-full"
+          />
+          <span class="text-white font-bold text-xl">MyWebsite</span>
+        </div>
+        <!-- Navbar Links (tengah) -->
+        <ul class="hidden md:flex justify-center space-x-8 text-xl">
+          <li><a href="#slider-section" class="text-white hover:text-blue-200">Home</a></li>
+          <li><a href="#about-section" class="text-white hover:text-blue-200">About</a></li>
+          <li><a href="#berita-section" class="text-white hover:text-blue-200">Berita</a></li>
+        </ul>
+        <!-- Hamburger Button (kanan, mobile) -->
+        <div class="absolute right-0 flex items-center gap-2 pr-4">
+          <button
+            class="hidden md:inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold mx-8 py-3 px-12 rounded-full transition"
+          >
+            LOGIN
+          </button>
+          <button
+            id="menu-btn"
+            class="block md:hidden text-white focus:outline-none"
+            aria-label="Open Menu"
+          >
+            <!-- Lucide Menu Icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-8 h-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="4" x2="20" y1="12" y2="12" />
+              <line x1="4" x2="20" y1="6" y2="6" />
+              <line x1="4" x2="20" y1="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Sidebar (Mobile) -->
+      <div
+        id="sidebar"
+        class="fixed top-0 left-0 h-full w-64 bg-gray-800 shadow-lg z-50 transform -translate-x-full transition-transform duration-700 md:hidden"
+      >
+        <div
+          class="flex justify-between items-center p-4 border-b border-gray-700"
+        >
+          <span class="text-white font-bold text-xl">Menu</span>
+          <button
+            id="close-btn"
+            class="text-white focus:outline-none"
+            aria-label="Close Menu"
+          >
+            <!-- Lucide X Icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="18" x2="6" y1="6" y2="18" />
+              <line x1="6" x2="18" y1="6" y2="18" />
+            </svg>
+          </button>
+        </div>
+        <ul class="flex flex-col p-4 space-y-4">
+          <li>
+            <button
+              class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded transition mb-2"
+            >
+              Login
+            </button>
+          </li>
+          <li><a href="#slider-section" class="text-white hover:text-blue-200">Home</a></li>
+          <li><a href="#about-section" class="text-white hover:text-blue-200">About</a></li>
+          <li><a href="#berita-section" class="text-white hover:text-blue-200">Berita</a></li>
+        </ul>
+      </div>
+      <!-- Overlay -->
+      <div
+        id="overlay"
+        class="fixed inset-0 bg-black bg-opacity-40 z-40 hidden md:hidden"
+      ></div>
+    </nav>
+    <!-- Navbar End -->
+
+      <!-- Slider Section Start -->
+      <div id="slider-section" class="mt-2 flex flex-col">
+  <div class="relative w-full max-w-full">
+          <div id="slider-images" class="overflow-hidden rounded-lg">
+            <div class="flex transition-transform duration-500" id="slider-track">
+              <div class="w-full flex-shrink-0 flex flex-col items-center">
+
+                <div class="relative w-full">
+                  <img src="img/cerydra.jpg" alt="Gambar 1" class="w-full h-64 md:h-[28rem] lg:h-[45rem] object-cover rounded-lg" />
+                  <div class="absolute left-0 right-0 bottom-0 h-32 rounded-b-lg" style="background: linear-gradient(to bottom, transparent, #000000 90%);"></div>
+                  <div class="absolute left-0 bottom-8 flex flex-col items-start pl-8">
+                    <p class="text-left text-lg font-semibold text-white drop-shadow mr-7 hidden md:block">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur natus magni architecto deleniti. Numquam, repudiandae est ipsa adipisci debitis cum sequi quibusdam eaque recusandae quas soluta repellat id molestiae nobis aperiam sint impedit iusto voluptatem libero aliquam. Soluta minima atque accusamus in maxime aliquam necessitatibus sequi, itaque odio impedit praesentium!</p>
+                    <button class="mt-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded transition">Detail</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full flex-shrink-0 flex flex-col items-center">
+                <div class="relative w-full">
+                  <img src="img/hyasilens.jpg" alt="Gambar 2" class="w-full h-64 md:h-[28rem] lg:h-[45rem] object-cover rounded-lg" />
+                  <div class="absolute left-0 right-0 bottom-0 h-32 rounded-b-lg" style="background: linear-gradient(to bottom, transparent, #000000 90%);"></div>
+                  <div class="absolute left-0 bottom-8 flex flex-col items-start pl-8">
+                    <p class="text-left text-lg font-semibold text-white drop-shadow hidden md:block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores facilis fuga, enim praesentium voluptate nisi ratione quaerat nam similique ex quis quibusdam eligendi doloremque repellendus sunt laborum recusandae molestias unde, earum ipsum vero itaque aliquam iste. Alias molestias vitae voluptatum, voluptatem non ut consectetur reprehenderit corporis accusamus, dolore quasi nihil!</p>
+                    <button class="mt-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded transition">Detail</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full flex-shrink-0 flex flex-col items-center">
+                <div class="relative w-full">
+                  <img src="img/the-hertaLS.jpg" alt="Gambar 3" class="w-full h-64 md:h-[28rem] lg:h-[45rem] object-cover rounded-lg" />
+                  <div class="absolute left-0 right-0 bottom-0 h-32 rounded-b-lg" style="background: linear-gradient(to bottom, transparent, #000000 90%);"></div>
+                  <div class="absolute left-0 bottom-8 flex flex-col items-start pl-8">
+                    <p class="text-left text-lg font-semibold text-white drop-shadow hidden md:block">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero adipisci quo quisquam amet voluptatibus quam, dolores, accusantium ipsam omnis nostrum, possimus tempora recusandae! Cumque reiciendis, repellendus iste obcaecati ipsum odio dolor, consequuntur laborum aperiam quisquam deserunt aliquam voluptas labore cum asperiores voluptate quis libero et laudantium est voluptates esse. Dolores!</p>
+                    <button class="mt-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded transition">Detail</button>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <!-- Slider Controls -->
+          <button id="prev-btn" class="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-700 bg-opacity-70 text-white px-3 py-2 rounded-full hover:bg-blue-600 transition">&#8592;</button>
+          <button id="next-btn" class="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-700 bg-opacity-70 text-white px-3 py-2 rounded-full hover:bg-blue-600 transition">&#8594;</button>
+        </div>
+      </div>
+
+  <div id="about-section" class="ml-9 md:ml-24 mr-9 md:mr-72 -mt-12">
+      <div class="mb-16">
+        <h1 class="text-4xl text-start font-bold mt-32">MyWebsite</h1>
+      </div>
+      <div class="mb-12">
+        <p class="text-xl">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+          reiciendis necessitatibus voluptas illum doloremque rem. Sapiente,
+          perspiciatis explicabo ab beatae repellendus delectus porro, et aut
+          earum saepe odio deleniti qui alias omnis iusto, animi unde quae
+          voluptatibus eligendi! Reiciendis consequuntur distinctio voluptatibus
+          porro cupiditate eum, quam repellendus voluptas alias eos.
+        </p>
+      </div>
+      <div>
+        <button
+          class="bg-blue-500 hover:bg-blue-600 text-white font-bold text-lg mx-011 py-3 px-7 rounded-lg transition"
+        >
+          About
+        </button>
+      </div>
+      
+      </div>
+      </div>
+      </div>
+
+      <div class="ml-9 md:ml-24 mr-9 md:mr-72 mt-32">
+        <h1 class="text-4xl  font-bold">
+            Sorotan
+        </h1>
+      </div>
+      <div class="flex flex-col md:flex-row justify-center items-center gap-14 mt-12">
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden w-[90vw] max-w-md md:max-w-xl">
+          <img src="img/fireflykotak.jpeg" alt="Gambar 1" class="w-full h-[30rem] object-cover" />
+          <div class="p-4">
+              <p class="mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, mollitia. Labore, alias, eligendi esse perspiciatis iste perferendis sint vel dolor rem ipsa ullam unde. Rem molestias aperiam debitis iste atque!</p>
+              <span class="inline-block bg-blue-200 text-blue-800 text-sm font-semibold px-4 py-1 rounded mb-2">Lainnya</span>
+          </div>
+        </div>
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden w-[90vw] max-w-md md:max-w-xl relative">
+            <img src="img/evernightkotak.jpg" alt="Gambar 2" class="w-full h-[30rem] object-cover" />
+            
+            <div class="p-4">
+                <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, quae, perferendis quas in quaerat magni, vitae reprehenderit tempora quos dignissimos ipsa? Optio hic ipsa fuga in temporibus minima recusandae nihil!</p>
+                <span class="inline-block bg-blue-200 text-blue-800 text-sm font-semibold px-4 py-1 rounded mb-2">Lainnya</span>
+            </div>
+          </div>
+    </div>
+    <div>
+      <div id="berita-section" class="ml-9 md:ml-24 mr-9 md:mr-72 mt-32">
+        <h1 class="text-4xl text-start font-bold mb-16">Berita Terbaru</h1>
+      </div>
+      <div class="flex flex-wrap gap-8 justify-center items-stretch px-4 md:px-24" id="news-cards">
+        <!-- Cards will be rendered here by JS -->
+        <script src="news-data.js"></script>
+      </div>
+      <div class="flex justify-center mt-8 mb-16" id="news-pagination">
+        <!-- Pagination will be rendered here by JS -->
+        <script src="news-pagination.js"></script>
+      </div>
+
+      
+    </div>
+  <script src="smooth-scroll.js"></script>
+  <script src="navbar.js"></script>
+
+  <!-- Footer Start -->
+  <footer class="bg-gray-900 text-gray-200 mt-24 pt-12 pb-6 px-4 md:px-24">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between gap-12 md:gap-0">
+      <div class="flex flex-col gap-4 md:w-1/3">
+        <div class="flex items-center gap-3">
+          <img src="img/cerydralogo.jpg" alt="Logo" class="h-12 w-12 rounded-full object-contain border-2 border-blue-500" />
+          <span class="text-2xl font-bold text-white tracking-wide">MyWebsite</span>
+        </div>
+        <p class="text-gray-400 text-sm max-w-xs">Website ini menyajikan berita, informasi, dan sorotan terbaru dari SMKN 4 Payakumbuh. Temukan info menarik dan update setiap hari!</p>
+        <div class="flex gap-3 mt-2">
+          <a href="#" class="hover:text-blue-400" aria-label="Instagram"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+          <a href="#" class="hover:text-blue-400" aria-label="Facebook"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6"><path d="M18 2h-3a4 4 0 0 0-4 4v3H7v4h4v8h4v-8h3l1-4h-4V6a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" class="hover:text-blue-400" aria-label="YouTube"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6"><path d="M22.54 6.42A2.78 2.78 0 0 0 20.7 4.6C19.13 4 12 4 12 4s-7.13 0-8.7.6A2.78 2.78 0 0 0 1.46 6.42 29.94 29.94 0 0 0 1 12a29.94 29.94 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.3 19.4c1.57.6 8.7.6 8.7.6s7.13 0 8.7-.6a2.78 2.78 0 0 0 1.84-1.82A29.94 29.94 0 0 0 23 12a29.94 29.94 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+        </div>
+      </div>
+      <div class="flex flex-col gap-2 md:w-1/3">
+        <span class="text-lg font-semibold text-white mb-2">Navigasi</span>
+        <a href="#slider-section" class="hover:text-blue-400">Home</a>
+        <a href="#about-section" class="hover:text-blue-400">About</a>
+        <a href="#berita-section" class="hover:text-blue-400">Berita</a>
+      </div>
+      <div class="flex flex-col gap-2 md:w-1/3">
+        <span class="text-lg font-semibold text-white mb-2">Kontak</span>
+        <span class="text-gray-400">SMKN 4 Payakumbuh</span>
+        <span class="text-gray-400">Jl. Muchtar Latief, Padang Sikabu, Kec. Lamposi Tigo Nagori, Kota Payakumbuh, Sumatera Barat</span>
+        <span class="text-gray-400">Website : smkn4pyk.sch.id</span>
+        <span class="text-gray-400">Telp: 0812345687906</span>
+      </div>
+    </div>
+    <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500 text-sm">
+      &copy; 2025 TeFa RPL. All rights reserved.
+    </div>
+  </footer>
+  <!-- Footer End -->
+  </body>
+</html>
